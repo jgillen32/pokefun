@@ -1,0 +1,22 @@
+.dex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards {
+    min-width: 100px;
+    min-height: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 15px;
+    border: 1px solid grey;
+    text-align: center;
+    box-shadow: 5px 5px 15px grey;
+}
+.cards img:hover {
+    width: 110px;
+    height: 110px;
+}  

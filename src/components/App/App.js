@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Router } from "@reach/router"
-import initData from "./initialData";
-import Home from './Home';
-import Detail from "./Detail";
+import initData from "../../resources/initialData";
+import Home from '../Home/';
+import Detail from "../Detail/";
 
 const App = () => {
   const [data] = useState(initData);

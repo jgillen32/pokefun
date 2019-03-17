@@ -28,7 +28,7 @@ const Detail = (props) => {
             <p>Height: {data.height}</p>
             <p>Types: {data.types ?
                 data.types.map((i,ind) => {
-                    return (<span>{i.type.name}{(ind < data.types.length -1) ? ',': null} </span>)
+                    return (<span key={i.type.name}>{i.type.name}{(ind < data.types.length -1) ? ',': null} </span>)
                 }):
                 null
             }
@@ -36,7 +36,7 @@ const Detail = (props) => {
             <p>Form:&nbsp;
                 {data.forms ? 
                     data.forms.map((i,ind) => {
-                        return ( <span>{i.name}{(ind < data.forms.length -1) ? ',': null} </span>);
+                        return ( <span key={i.name}>{i.name}{(ind < data.forms.length -1) ? ',': null} </span>);
                     }):
                     null
                 }
@@ -45,7 +45,7 @@ const Detail = (props) => {
                     data.stats.map(i => {
                         let styles = {width: i.base_stat+"px"};
                         return (
-                            <div>{i.stat.name} ({i.base_stat})
+                            <div key={i.stat.name}>{i.stat.name} ({i.base_stat})
                                 <div className="bar">
                                     <div className="percent" style={styles}></div>
                                 </div>
@@ -58,7 +58,7 @@ const Detail = (props) => {
             <ul className="moves">
                 {data.moves ? 
                     data.moves.map(i=>{
-                        return <li className="move">{i.move.name}</li>
+                        return <li key={i.move.name} className="move">{i.move.name}</li>
                     }):
                     null
                 }

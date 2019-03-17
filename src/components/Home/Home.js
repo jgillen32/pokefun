@@ -7,7 +7,7 @@ const Home = (props) => {
         {
             props.data.map(i => {
                 return (
-                    <div className="cards">
+                    <div key={i.entry_number} className="cards">
                         <Link to={"/pokemon/" + i.entry_number}>
                             {i.pokemon_species.name}
                             <img alt={i.pokemon_species.name} src={"/images/" + i.entry_number + ".png"} />

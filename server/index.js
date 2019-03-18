@@ -6,7 +6,6 @@ server.get('/pokemon/v1/:id/', async (req, resp) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${req.params.id}/`;
     const pokemon = await getPokemon(url);
     const species = await getSpecies(pokemon.species);
-    console.log(species);
     const evolution = await getEvolution(species.evolution);
 
     const response = {

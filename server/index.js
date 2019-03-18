@@ -2,7 +2,7 @@ const axios = require('axios');
 const server = require("express")();
 const dataObj = require('./data');
 
-server.get('/poke/v1/pokemon/:id/', async (req, resp) => {
+server.get('/pokemon/v1/:id/', async (req, resp) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${req.params.id}/`;
     const pokemon = await getPokemon(url);
     const species = await getSpecies(pokemon.species);

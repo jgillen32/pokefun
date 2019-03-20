@@ -1,7 +1,7 @@
 module.exports = {
-    name: '',
-    species: {},
     id: 0,
+    name: '',
+    species: {url:''},
     height: 0,
     types: [],
     forms: [],
